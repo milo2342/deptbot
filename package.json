@@ -1,7 +1,7 @@
 {
-  "name": "psrp-department-utilities",
+  "name": "WCRP-department-utilities",
   "version": "1.0.0",
-  "description": "PSRP Department Utilities with FiveM duty-hour tracking, LEO voice tracking, department reports, ride-alongs and staff tools.",
+  "description": "WCRP Department Utilities with FiveM duty-hour tracking, LEO voice tracking, department reports, ride-alongs and staff tools.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

@@ -1,4 +1,4 @@
--- PSRP Department Utilities - FiveM duty adapter
+-- WCRP Department Utilities - FiveM duty adapter
 --
 -- This file does NOT create /duty. It gives you the two database actions
 -- your existing /duty script needs to call:
@@ -28,13 +28,13 @@ function StartDuty(source, department)
     department = tostring(department or ''):upper()
 
     if not ALLOWED_DEPARTMENTS[department] then
-        print(('[PSRP Duty] Invalid department: %s'):format(department))
+        print(('[WCRP Duty] Invalid department: %s'):format(department))
         return false
     end
 
     local discordId = getDiscordId(source)
     if not discordId then
-        print(('[PSRP Duty] No Discord identifier found for player %s'):format(source))
+        print(('[WCRP Duty] No Discord identifier found for player %s'):format(source))
         return false
     end
 
@@ -62,7 +62,7 @@ end
 function EndDuty(source)
     local discordId = getDiscordId(source)
     if not discordId then
-        print(('[PSRP Duty] No Discord identifier found for player %s'):format(source))
+        print(('[WCRP Duty] No Discord identifier found for player %s'):format(source))
         return false
     end
 
