@@ -1,0 +1,9 @@
+{
+  "name": "wcrp-department-utilities",
+  "version": "2.0.0",
+  "description": "WCRP Department Utilities: global duty hours, LEO voice tracking, reports, ride-alongs, permissions and logs.",
+  "main": "index.js",
+  "scripts": {"start":"node index.js"},
+  "engines": {"node": ">=18.17.0"},
+  "dependencies": {"discord.js":"^14.25.1","dotenv":"^16.6.1","mysql2":"^3.14.4","luxon":"^3.7.1"}
+}
