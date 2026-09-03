@@ -248,7 +248,7 @@ function dutyOnEmbed({ user, department, inTime }) {
       { name: 'Clock In', value: formatDateTime(inTime), inline: true },
       { name: 'Department', value: `${department} — ${deptName(department)}`, inline: true }
     )
-    .setFooter({ text: `PSRP Department Utilities • ${formatShort(inTime)}` });
+    .setFooter({ text: `WCRP Department Utilities • ${formatShort(inTime)}` });
 }
 
 function dutyOffEmbed({ user, department, outTime, inTime, session, weekly, inVoice, outVoice, coverage, reason }) {
@@ -267,7 +267,7 @@ function dutyOffEmbed({ user, department, outTime, inTime, session, weekly, inVo
       { name: 'Out of Voice', value: formatDuration(outVoice), inline: true },
       { name: 'Voice Coverage', value: `${coverage.toFixed(0)}%`, inline: true }
     )
-    .setFooter({ text: `PSRP Department Utilities • ${formatShort(outTime)}` });
+    .setFooter({ text: `WCRP Department Utilities • ${formatShort(outTime)}` });
   if (inTime) embed.addFields({ name: 'Clock In', value: formatDateTime(inTime), inline: false });
   return embed;
 }
@@ -1074,7 +1074,7 @@ async function handleCommand(interaction) {
         { name: 'Notes', value: notes || 'None', inline: false },
         { name: 'Logged By', value: `<@${interaction.user.id}>`, inline: true }
       )
-      .setFooter({ text: `PSRP Department Utilities • ${formatShort(now())}` });
+      .setFooter({ text: `WCRP Department Utilities • ${formatShort(now())}` });
     if (logChannel) await logChannel.send({ embeds: [embed] }).catch(() => {});
     return interaction.reply({ embeds: [embed] });
   }
